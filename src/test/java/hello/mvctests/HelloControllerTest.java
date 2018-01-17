@@ -1,6 +1,6 @@
-package app.mvctests;
+package hello.mvctests;
 
-import app.HelloController;
+import hello.HelloController;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
