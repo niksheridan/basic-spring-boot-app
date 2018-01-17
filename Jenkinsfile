@@ -1,6 +1,7 @@
 podTemplate(
     label: 'mypod', 
-    containers: [ containerTemplate(name: 'maven', image: 'andycjones/maven-docker', ttyEnabled: true, command: 'cat')]) {
+    containers: [ containerTemplate(name: 'maven', image: 'andycjones/maven-docker', ttyEnabled: true, command: 'cat')],
+    volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')]) {
         node('mypod') {
             stage('Get a Maven project') {
                 git 'https://github.com/andy-c-jones/basic-spring-boot-app.git'
