@@ -99,6 +99,17 @@
                             <build>
                                 <dockerFileDir>${project.basedir}/docker</dockerFileDir>
                             </build>
+                            <run>
+                                <ports>
+                                    <port>8080:8080</port>
+                                </ports>
+                                <wait>
+                                    <http>
+                                        <url>http://localhost:8080/</url>
+                                    </http>
+                                    <time>10000</time>
+                                </wait>
+                            </run>
                         </image>
                     </images>
                 </configuration>
