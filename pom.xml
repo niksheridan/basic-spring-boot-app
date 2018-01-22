@@ -95,7 +95,7 @@
                     <images>
                         <image>
                             <alias>spring-boot-app</alias>
-                            <name>andy-c-jones/basic-spring-boot-app:${project.version}</name>
+                            <name>localhost:5000/basic-spring-boot-app:${project.version}</name>
                             <build>
                                 <dockerFileDir>${project.basedir}/docker</dockerFileDir>
                             </build>
