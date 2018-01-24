@@ -15,8 +15,7 @@ public class ExampleDockerImageTest {
 
     @Test
     public void shouldDoSomething() {
-//        ResponseEntity<String> helloWorld = restTemplate.getForEntity("http://localhost:8080/", String.class);
-//        assertThat(helloWorld.getBody()).isEqualTo("Hello World!");
-        assertThat(true).isEqualTo(true);
+        ResponseEntity<String> helloWorld = restTemplate.getForEntity("http://localhost:8080/", String.class);
+        assertThat(helloWorld.getBody()).isEqualTo("Hello World!");
     }
 }
