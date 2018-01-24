@@ -7,6 +7,8 @@ podTemplate(
                 git 'https://github.com/andy-c-jones/basic-spring-boot-app.git'
                 container('maven') {
                     stage('Build a Maven project') {
+                        sh 'mvn versions:set -DnewVersion=${env.BUILD_NUMBER}'
+                        sh 'mvn versions:commit'
                         sh 'mvn -B clean install'
                     }
                 }
