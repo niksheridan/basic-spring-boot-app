@@ -108,7 +108,7 @@
                                     <http>
                                         <url>http://localhost:8080/</url>
                                     </http>
-                                    <time>10000</time>
+                                    <time>60000</time>
                                 </wait>
                             </run>
                         </image>
